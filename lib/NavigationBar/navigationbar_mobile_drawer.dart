@@ -117,7 +117,6 @@ class _MobileDrawerItemState extends State<MobileDrawerItem> {
           ),
         ),
         Divider(
-          height: 2,
           color: Color(0xFF0CBDB3),
         ),
       ],

@@ -5,6 +5,7 @@ import 'package:website/Pages/resume.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:website/center.dart';
 
 import 'Navigation.dart';
 
@@ -19,14 +20,12 @@ class _NavigationBarDesktopState extends State<NavigationBarDesktop> {
   Widget build(BuildContext context) {
     return Consumer<Navigation>(
       builder: (context, navigation, child) {
-        return Stack(
-          children: [
-            Container(
-              height: 50.0,
-              color: Color(0xFF2D3133),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        return Container(
+          height: 50.0,
+          color: Color(0xFF2D3133),
+          child: CenterView(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 DesktopNavigationItem(
                   title: 'Home',
@@ -50,7 +49,7 @@ class _NavigationBarDesktopState extends State<NavigationBarDesktop> {
                 ),
               ],
             ),
-          ],
+          ),
         );
       },
     );
@@ -99,7 +98,7 @@ class _DesktopNavigationItemState extends State<DesktopNavigationItem> {
             await Navigator.pushNamed(context, widget.onTap);
           },
           child: Padding(
-            padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
+            padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
             child: Text(
               widget.title,
               style: TextStyle(
