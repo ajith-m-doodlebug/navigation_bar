@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   responsive_builder: ^0.3.0
   provider: ^4.3.2+2
+  center_webview: ^0.0.1
 
 dev_dependencies:
   flutter_test:

@@ -5,7 +5,7 @@ import 'package:website/Pages/resume.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:website/center.dart';
+import 'package:center_webview/center_webview.dart';
 
 import 'Navigation.dart';
 
@@ -23,7 +23,7 @@ class _NavigationBarDesktopState extends State<NavigationBarDesktop> {
         return Container(
           height: 50.0,
           color: Color(0xFF2D3133),
-          child: CenterView(
+          child: CenterWebView(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
